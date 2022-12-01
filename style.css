@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 5px;
+}
+
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    min-height: 100%;
+    background-color: rgba(137, 43, 226, 0.089);
+    background-image: url('./img10.webp');
+    background-size: cover;
+}
+.texto{
+    color:  rgba(110, 42, 165, 0.75);
+    text-shadow: 1px 1px white;
+}
+.head{
+    color: rgba(110, 42, 165, 0.75);
+}
+h2, h3{
+    color: rgba(110, 42, 165, 0.75);
+    text-shadow: 1px 1px white;
+}
+.logo{
+    width: 105px;
+    background-color:rgba(110, 42, 165, 0.75);
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 0%;
+    padding: 0%;
+}
+.logo:hover{
+    box-shadow: -1px 1px 7px 0px rgba(110, 42, 165, 0.75);
+}
+.logo2{
+    width: 90px;
+    border-radius: 20px;
+}
+.f{
+    height: 180px;
+}
+.logo2:hover{
+    box-shadow: -1px 1px 7px 0px rgba(110, 42, 165, 0.75);
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+h1{
+    font-size: 2.3rem;
+    color: blueviolet;
+    text-shadow: 1px 1px white;
+}
+a{
+    text-decoration: none;
+}
+.header {
+    grid-area: header;
+    background-color: rgba(255, 255, 255, 0);
+    background-size: 600px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+.uno{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.uno:hover{
+    box-shadow: -1px 1px 7px 0px rgba(248, 248, 248, 0.75);
+    max-width: 105px;
+}
+.navbar {
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 10px;
+}
+.imgnav{
+    width: 70px;
+    border-radius: 10px;
+}
+.logo3{
+    width: 400px;
+}
+.sidebar {
+    grid-area: sidebar;
+    text-align: justify;
+    background-color: rgba(72, 255, 0, 0.226);
+    text-shadow: 1px 1px green;
+}
+.imgredes{
+    width: 80px;
+}
+
+.imgredes:hover{
+    width: 84px;
+}
+.main {
+    grid-area: main;
+    background-position-x: left;
+    background-color: rgba(255, 255, 255, 0);
+}
+.imgmain{
+    width: 100px;
+    border-radius: 20px;
+}
+.imgmain:hover{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+.footer {
+    grid-area: footer;
+    background-image: url('Granos de café 1.jpg');
+    background-size: 120px;
+    background-position-y: start;
+    background-color: rgba(255, 255, 255, 0.082);
+}
+@media (min-width:600px){
+    .grid-container{
+        grid-gap: 20px;
+        grid-template: 
+        "header  header" 130px
+        "navbar  navbar" auto
+        "sidebar main"   auto 
+        "footer  footer" 70px/
+        100px    auto;
+        overflow-y: scroll;
+    }
+}
+@media (min-width:900px){
+    .grid-container{
+        grid-template: 
+        "header  header header"  130px
+        "navbar  main   sidebar" auto
+        "footer  footer footer"  200px/
+        110px    auto    100px;
+        overflow-y: scroll;
+    }
+    .navbar {
+        grid-area: navbar;
+        grid-template: 
+        "uno"       100px
+        "dos"       100px
+        "tres"      100px
+        "cuatro"    100px;
+        grid-row-gap: 20px;
+    }
+}
